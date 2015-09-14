@@ -1,0 +1,206 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="10dp">
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:id="@+id/setup_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/setup_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/question_title"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:id="@+id/setup_description_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/setup_description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/question_text"/>
+
+    <LinearLayout
+        android:id="@+id/setup_wifi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/setup_item_border_bg"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:orientation="vertical">
+
+            <com.unfc.choicecustomercaretb.view.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/setup_connect_wifi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/question_title"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomTextView
+                android:id="@+id/setup_wifi_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/setup_not_connected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/question_text"/>
+        </LinearLayout>
+
+        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+            android:id="@+id/setup_wifi_connect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="30"
+            android:background="@drawable/btn_emergency_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/connect"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_button_text"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setup_server_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/setup_item_border_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:orientation="vertical">
+
+            <com.unfc.choicecustomercaretb.view.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/setup_connect_server"
+                android:textColor="@color/black"
+                android:textSize="@dimen/question_title"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomTextView
+                android:id="@+id/setup_server_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/setup_not_connected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/question_text"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomEditText
+                android:id="@+id/setup_server_url_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/server_address"
+                android:nextFocusDown="@+id/info_last_name_edt"
+                android:padding="@dimen/edt_padding"
+                android:singleLine="true"
+                android:textSize="@dimen/edt_text"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                android:id="@+id/setup_server_connect"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_emergency_bg"
+                android:gravity="center"
+                android:text="@string/connect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_text"
+                android:textStyle="bold"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                android:id="@+id/setup_server_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_emergency_bg"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_text"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setup_room_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/setup_item_border_bg"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/setup_room_num_spn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spn_border_bg"
+                android:nextFocusDown="@+id/setup_bed_num_spn"/>
+
+            <Spinner
+                android:id="@+id/setup_bed_num_spn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spn_border_bg"/>
+        </LinearLayout>
+
+        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+            android:id="@+id/setup_finish_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="30"
+            android:background="@drawable/btn_emergency_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/complete_setup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_button_text"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

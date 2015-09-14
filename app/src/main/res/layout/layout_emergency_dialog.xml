@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/emergency_bg"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="20dp">
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/oh_crap"
+        android:textColor="@color/white"
+        android:textSize="@dimen/emergency_title"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/emergency_description"
+        android:textColor="@color/white"
+        android:textSize="@dimen/emergency_description"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/emergency_close_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/emergency_description"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomEditText
+        android:id="@+id/emergency_pin_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="@string/pin"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="@dimen/edt_padding"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/edt_text"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomClickTextView
+        android:id="@+id/emergency_close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_emergency_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="@dimen/home_button_text"
+        android:textStyle="bold"/>
+
+</LinearLayout>

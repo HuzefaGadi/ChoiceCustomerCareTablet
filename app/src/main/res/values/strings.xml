@@ -1,0 +1,51 @@
+<resources>
+
+    <string name="ok">OK</string>
+    <string name="close">CLOSE</string>
+    <string name="gcm_sender_id">276290617510</string>
+    <string name="app_name">Choice Customer Care</string>
+    <string name="string_request">Room %1$s, Bed %2$s sent a %3$s request</string>
+
+    <!-- question -->
+    <string name="cancel">Cancel</string>
+    <string name="connect">CONNECT</string>
+    <string name="bed_no">Bed Number</string>
+    <string name="room_no">Room Number</string>
+    <string name="complete_setup">COMPLETE</string>
+    <string name="question_continue">CONTINUE</string>
+    <string name="server_address">Server Address</string>
+    <string name="question_count">Question %1$s of %2$s</string>
+    <string name="please_input">Please input valid information!</string>
+
+    <!-- Emergency -->
+    <string name="oh_crap">Oh Crap</string>
+    <string name="emergency_description">There is a serious emergency going on</string>
+    <string name="emergency_close_message">Medical stuff please in put your pin code to close the emergency</string>
+
+    <!-- Set Up -->
+    <string name="setup_connected">Connected</string>
+    <string name="setup_not_connected">Not Connected</string>
+    <string name="setup_title">Choice Customer Care Setup</string>
+    <string name="setup_connect_wifi">Connect to Internet</string>
+    <string name="setup_wifi_connected">Connected to wifi: </string>
+    <string name="setup_description">Welcome to Device Setup</string>
+    <string name="setup_server_connected">Connected to server: </string>
+    <string name="setup_connect_server">Connect to Choice Server</string>
+    <string name="can_not_connect_to_server">Can\'t connect to server</string>
+
+    <!-- Home -->
+    <string name="food">Food/Drink</string>
+    <string name="pain">Pain</string>
+    <string name="other">Other</string>
+    <string name="reset">RESET</string>
+    <string name="pin">PIN CODE</string>
+    <string name="food_ad">Food Ad</string>
+    <string name="bathroom">Bathroom</string>
+    <string name="video_ad">Video Ad</string>
+    <string name="your_team">Your Team</string>
+    <string name="emergency">EMERGENCY</string>
+    <string name="what_new">What\'s new @UIC</string>
+    <string name="request_queue">Request Queue</string>
+    <string name="home_title">UIC Hospital – Room %1$s Bed %2$s</string>
+    <string name="emergency_message">This button will cause alarms to sound and must be used in the event you are in a life changing scenario that is drastically different than the current condition you are in. Please do not use unless absolutely necessary.</string>
+</resources>

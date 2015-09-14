@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:id="@+id/question_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/question_count"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:id="@+id/question_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/question_count_text"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/question_title"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomTextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_title"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/question_text"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomImageButton
+        android:id="@+id/question_prev_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/question_text"
+        android:padding="@dimen/navigation_button_padding"
+        android:src="@mipmap/ic_action_previous_item"
+        android:visibility="invisible"/>
+
+    <com.unfc.choicecustomercaretb.view.CustomImageButton
+        android:id="@+id/question_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/question_text"
+        android:padding="@dimen/navigation_button_padding"
+        android:src="@mipmap/ic_action_next_item"
+        android:visibility="invisible"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/question_continue_btn"
+        android:layout_below="@+id/question_text"
+        android:layout_toLeftOf="@+id/question_next_btn"
+        android:layout_toRightOf="@+id/question_prev_btn">
+
+        <RadioGroup
+            android:id="@+id/fragment_question_group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dp"/>
+    </ScrollView>
+
+    <com.unfc.choicecustomercaretb.view.CustomClickTextView
+        android:id="@+id/question_continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/question_next_btn"
+        android:layout_toRightOf="@+id/question_prev_btn"
+        android:background="@drawable/btn_emergency_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/question_continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/home_button_text"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70">
+
+            <com.unfc.choicecustomercaretb.view.DisablePagingViewPager
+                android:id="@+id/question_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomImageButton
+                android:id="@+id/question_prev_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/navigation_button_bg"
+                android:padding="@dimen/navigation_button_padding"
+                android:src="@mipmap/ic_action_previous_item"
+                android:visibility="invisible"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomImageButton
+                android:id="@+id/question_next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/navigation_button_bg"
+                android:padding="@dimen/navigation_button_padding"
+                android:src="@mipmap/ic_action_next_item"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:adjustViewBounds="true"
+            android:background="@color/color_primary"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_top_bar"/>
+    </LinearLayout>
+</LinearLayout>

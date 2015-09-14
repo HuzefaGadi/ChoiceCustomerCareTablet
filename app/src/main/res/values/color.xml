@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <!-- App theme -->
+    <color name="separate_bg">#959292</color>
+    <color name="color_primary">#e85d1c</color>
+    <color name="color_primary_dark">#c0501c</color>
+
+    <!-- Home -->
+    <color name="emergency_bg">#e61610</color>
+
+    <!-- Question -->
+    <color name="navigation_button_bg">#80323232</color>
+
+    <!-- Information -->
+    <color name="spn_border">#828080</color>
+</resources>

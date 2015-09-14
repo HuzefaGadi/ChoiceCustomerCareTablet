@@ -1,0 +1,323 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/home_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/home_room_title"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/home_row_padding"
+                    android:paddingTop="@dimen/home_row_padding">
+
+                    <LinearLayout
+                        android:id="@+id/home_bathroom_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:src="@drawable/bathroom"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bathroom"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/home_food_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:src="@drawable/food"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/home_pain_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:src="@drawable/boy"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pain"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_other_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:src="@drawable/alert"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/home_row_padding"
+                    android:paddingTop="@dimen/home_row_padding">
+
+                    <LinearLayout
+                        android:id="@+id/home_team_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:contentDescription="@null"
+                            android:src="@drawable/teamwork"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_team"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_new_uic_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:contentDescription="@null"
+                            android:src="@drawable/medical"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/what_new"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_video_ad_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:contentDescription="@null"
+                            android:src="@drawable/hospital"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/video_ad"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_food_ad_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.unfc.choicecustomercaretb.view.CustomImageButton
+                            android:layout_width="@dimen/home_item_size"
+                            android:layout_height="@dimen/home_item_size"
+                            android:layout_marginLeft="@dimen/home_item_imv_margin"
+                            android:layout_marginRight="@dimen/home_item_imv_margin"
+                            android:contentDescription="@null"
+                            android:src="@drawable/steak"/>
+
+                        <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_ad"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/home_item_text"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                    android:id="@+id/home_emergency_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_emergency_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/emergency"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/home_button_text"
+                    android:textStyle="bold"/>
+
+                <com.unfc.choicecustomercaretb.view.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/emergency_message"
+                    android:textSize="@dimen/home_room_description"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/separate_bg"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.unfc.choicecustomercaretb.view.CustomClickTextView
+                android:id="@+id/home_reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_emergency_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_text"
+                android:textStyle="bold"/>
+
+            <com.unfc.choicecustomercaretb.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/request_queue"
+                android:textColor="@color/black"
+                android:textSize="@dimen/home_room_title"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_queue_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
