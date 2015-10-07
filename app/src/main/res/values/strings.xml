@@ -18,7 +18,7 @@
     <string name="please_input">Please input valid information!</string>
 
     <!-- Emergency -->
-    <string name="oh_crap">Oh Crap</string>
+    <string name="oh_crap">Help is Needed</string>
     <string name="emergency_description">There is a serious emergency going on</string>
     <string name="emergency_close_message">Medical stuff please in put your pin code to close the emergency</string>
 

@@ -16,12 +16,23 @@
 
 package com.unfc.choicecustomercaretb.gcmservices;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
 
+
 import com.google.android.gms.gcm.GcmListenerService;
+import com.unfc.choicecustomercaretb.R;
+import com.unfc.choicecustomercaretb.activity.HomeActivity;
 import com.unfc.choicecustomercaretb.utility.Constants;
+
+import java.util.Date;
 
 public class MyGcmListenerService extends GcmListenerService {
 
@@ -39,6 +50,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
 		Intent intent = new Intent(Constants.INTENT_UPDATE_REQUEST_LIST);
 		LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+		sendNotification("Your request will be processed by"+data.getString("acceptedBy"));
 	}
 
 	/**
@@ -48,23 +60,22 @@ public class MyGcmListenerService extends GcmListenerService {
 	 * @param message
 	 *            GCM message received.
 	 */
-	// private void sendNotification(String message) {
-	//
-	// Intent intent = new Intent(this, MainActivity.class);
-	// intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	// PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
-	// PendingIntent.FLAG_ONE_SHOT);
-	//
-	// Uri defaultSoundUri =
-	// RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-	// NotificationCompat.Builder notificationBuilder = new
-	// NotificationCompat.Builder(this)
-	// .setSmallIcon(R.drawable.app_icon).setContentTitle("GCM
-	// Message").setContentText(message)
-	// .setAutoCancel(true).setSound(defaultSoundUri).setContentIntent(pendingIntent);
-	//
-	// NotificationManager notificationManager = (NotificationManager)
-	// getSystemService(Context.NOTIFICATION_SERVICE);
-	// notificationManager.notify(0, notificationBuilder.build());
-	// }
+	 private void sendNotification(String message) {
+
+	 Intent intent = new Intent(this, HomeActivity.class);
+	 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	 PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
+	 PendingIntent.FLAG_ONE_SHOT);
+
+	 Uri defaultSoundUri =
+	 RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+	 NotificationCompat.Builder notificationBuilder = new
+	 NotificationCompat.Builder(this)
+	 .setSmallIcon(R.drawable.app_icon).setContentTitle("Your request has been accepted!!").setContentText(message)
+	 .setAutoCancel(true).setSound(defaultSoundUri).setContentIntent(pendingIntent);
+
+	 NotificationManager notificationManager = (NotificationManager)
+	 getSystemService(Context.NOTIFICATION_SERVICE);
+	 notificationManager.notify((int)new Date().getTime(), notificationBuilder.build());
+	 }
 }

@@ -33,7 +33,10 @@ import com.unfc.choicecustomercaretb.utility.RequestType;
 import com.unfc.choicecustomercaretb.utility.Utilities;
 import com.unfc.choicecustomercaretb.view.LoadingDialog;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -257,6 +260,26 @@ public class HomeActivity extends BaseActivity {
 			@Override
 			public void success(List<MessageEntity> messages, Response response) {
 
+				/*List<MessageEntity> finalMessages = new ArrayList<MessageEntity>();
+				Set<String> set = new HashSet<String>();
+
+				for(MessageEntity message : messages)
+				{
+					String messageQueueid = message.getMessageQueueId();
+					set.add(messageQueueid);
+				}
+				for(String messageQueueIdFromSet : set)
+				{
+					for(MessageEntity message : messages)
+					{
+						String messageQueueid = message.getMessageQueueId();
+						if(messageQueueid.equals(messageQueueIdFromSet))
+						{
+							finalMessages.add(message);
+							break;
+						}
+					}
+				}*/
 				displayQueue(messages);
 			}
 

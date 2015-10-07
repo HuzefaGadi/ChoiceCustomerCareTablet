@@ -5,54 +5,65 @@ package com.unfc.choicecustomercaretb.entity;
  */
 public class MessageEntity extends BaseEntity {
 
-	private int clientId;
-	private int patientId;
-	private int responderId;
-	private int messageTypeId;
+    private int clientId;
+    private int patientId;
+    private int responderId;
+    private int messageTypeId;
 
-	private String sent;
-	private String responded;
-	private String fullFilled;
-	private String messageText;
 
-	public int getClientId() {
-		return clientId;
-	}
+    private String messageQueueId;
+    private String sent;
+    private String responded;
+    private String fullFilled;
+    private String messageText;
 
-	public int getPatientId() {
-		return patientId;
-	}
 
-	public int getResponderId() {
-		return responderId;
-	}
+    public String getMessageQueueId() {
+        return messageQueueId;
+    }
 
-	public int getMessageTypeId() {
-		return messageTypeId;
-	}
+    public void setMessageQueueId(String messageQueueId) {
+        this.messageQueueId = messageQueueId;
+    }
 
-	public String getSent() {
-		return sent;
-	}
+    public int getClientId() {
+        return clientId;
+    }
 
-	public String getResponded() {
-		return responded;
-	}
+    public int getPatientId() {
+        return patientId;
+    }
 
-	public String getFullFilled() {
-		return fullFilled;
-	}
+    public int getResponderId() {
+        return responderId;
+    }
 
-	public String getMessageText() {
-		return messageText;
-	}
+    public int getMessageTypeId() {
+        return messageTypeId;
+    }
 
-	public void setMessageTypeId(int messageTypeId) {
-		messageTypeId = messageTypeId;
-	}
+    public String getSent() {
+        return sent;
+    }
 
-	public void setMessageText(String messageText) {
-		messageText = messageText;
-	}
+    public String getResponded() {
+        return responded;
+    }
+
+    public String getFullFilled() {
+        return fullFilled;
+    }
+
+    public String getMessageText() {
+        return messageText;
+    }
+
+    public void setMessageTypeId(int messageTypeId) {
+        messageTypeId = messageTypeId;
+    }
+
+    public void setMessageText(String messageText) {
+        messageText = messageText;
+    }
 
 }
